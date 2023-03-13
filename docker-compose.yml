@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  api:
+    image: api-vero
+    container_name: api
+    build:
+      context: .
+      
+    ports:
+        - "8000:8000"
+
+    
+  
