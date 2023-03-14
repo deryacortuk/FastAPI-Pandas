@@ -54,7 +54,7 @@ def check_hu(datas):
 @vehicle_router.post("/upload")
 def upload(kys:List[str],url, colored:Optional[bool] = True):
                    
-    csvDataFrame = pd.read_csv(url,  encoding='utf8',sep=';',header=None,names=kys,error_bad_lines=False)      
+    csvDataFrame = pd.read_csv(url,  encoding='utf8',sep=';',header=None,names=kys)      
        
     df = pd.DataFrame(csvDataFrame)   
     df["colored"] = colored
